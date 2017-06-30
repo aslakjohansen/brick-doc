@@ -4,7 +4,7 @@
 
 ![Stack Overview](figs/stack.png)
 
-<!-- Intro: entities, classes, instances and properties -->
+<!-- Intro: the three levels, entities, classes, instances and properties -->
 
 Dependency namespaces:
 - [RDF](https://www.w3.org/TR/rdf-syntax/) Declared, but not used below the model layer. Used for creating class instances in the model.
@@ -15,13 +15,22 @@ Dependency namespaces:
 - [XSD](https://www.w3.org/TR/xmlschema-2/) Declared, but not used below the model layer.
 
 Brick namespaces:
-- **Brick** Tagsets.
+- **Brick** Classes (aka Tagsets). These are the types.
 - **BrickTag** Essentially a list of tags.
 - **BrickFrame** The properties.
 
-<!-- Tagset warning: tree structure -->
-
 ## Concepts
+
+### Tagsets
+
+A class can be defined as a subclass to another (or multiple) classes. On the RDF level, this is a directed graph of *subClassOf* relations. Each node is this graph is a class entity and may have tags attached using the *usesTag* relation. To extract the mapping from tagset to tags one thus have to do:
+
+```sparql
+SELECT DISTINCT ?tagset ?tag
+WHERE {
+    ?tagset rdfs:subClassOf*/bf:usesTag ?tag .
+}
+```
 
 ### Flows
 
