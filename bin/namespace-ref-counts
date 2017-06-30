@@ -1,0 +1,42 @@
+#!/usr/bin/env python3.5
+
+import sys
+
+# guard: commandline arguments
+if len(sys.argv) == 1:
+    print('Syntax: %s TTL_FILES' % sys.argv[0])
+    print('        %s ~/vcs/git/GroundTruth/Brick/Brick*.ttl' % sys.argv[0])
+    exit()
+
+# read all lines
+lines = []
+filenames = sys.argv[1:]
+for filename in filenames:
+    with open(filename) as fo:
+        lines.extend(fo.readlines())
+
+# perform analysis
+counts = {}
+for line in lines:
+    elements = line.replace('\t', ' ').replace('\r', ' ').replace('\n', ' ').split(' ')
+    for element in elements:
+        pair = element.split(':')
+        if len(pair) == 2:
+            namespace = pair[0]
+            name      = pair[1]
+
+            if namespace == '<http': continue
+
+            if not namespace in counts:
+                counts[namespace] = {}
+            if not name in counts[namespace]:
+                counts[namespace][name] = 0
+            counts[namespace][name] += 1
+
+# present analysis
+for namespace in counts:
+    print('namespace: %s' % namespace)
+    for name in counts[namespace]:
+        print(' - %s: %u' % (name, counts[namespace][name]))
+    print('')
+

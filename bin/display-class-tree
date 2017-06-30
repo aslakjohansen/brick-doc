@@ -1,0 +1,96 @@
+#!/usr/bin/env python3.5
+
+import sys
+import rdflib
+
+ntagsets = []
+ntags    = []
+eparents = []
+etags    = []
+tagsetname = lambda tagset: 'tagset_%s' % tagset
+tagname    = lambda tag: 'tag_%s' % tag
+
+# guard: commandline arguments
+if len(sys.argv) < 3:
+    print('Syntax: %s TTL_FILES ENTITY' % sys.argv[0])
+    print('        %s ~/vcs/git/GroundTruth/Brick/Brick*.ttl Exhaust_Air_Temperature_Sensor' % sys.argv[0])
+    exit()
+
+# handle inputs
+entity = sys.argv[-1]
+filenames = sys.argv[1:-1]
+
+# load model
+m = rdflib.Graph()
+for filename in filenames:
+    m.parse(filename, format='turtle')
+BRICK      = rdflib.Namespace('http://buildsys.org/ontologies/Brick#')
+m.bind('brick', BRICK)
+
+qp = '''
+SELECT ?parent
+WHERE {
+    %s rdfs:subClassOf ?parent .
+}
+'''
+qt = '''
+SELECT ?tag
+WHERE {
+    %s bf:usesTag ?tag .
+}
+'''
+
+def iterate (root, indent=''):
+    # perform querie
+    parents = sorted(set(map(lambda parent: parent[0].split('#')[1], list(m.query(qp  % root)))))
+    tags    = sorted(set(map(lambda tag: tag[0].split('#')[1], list(m.query(qt  % root)))))
+    
+    # store info for graph
+    simpleroot = root.split(':')[-1]
+    ntagsets.append(simpleroot)
+    for parent in parents:
+        eparents.append((simpleroot, parent))
+    for tag in tags:
+        ntags.append(tag)
+        etags.append((simpleroot, tag))
+    
+    # present
+    print('%s = %s%s' % (indent, '' if indent=='' else 'subClassOf ', root))
+    for tag in tags:
+        print('%s   - usesTag %s' % (indent, tag))
+    
+    # iterate
+    for parent in parents:
+        parent = 'brick:%s' % parent
+        iterate(parent, '%s  ' % indent)
+
+iterate(entity)
+
+# generate dotfile
+lines = []
+lines.append('digraph %s {' % entity.split(':')[-1])
+lines.append('    // tagset nodes')
+for tagset in set(ntagsets):
+    lines.append('    %s [label="%s", color="blue"];' % (tagsetname(tagset), tagset) )
+lines.append('    ')
+lines.append('    // tag nodes')
+for tag in set(ntags):
+    lines.append('    %s [label="%s", color="red"];' % (tagname(tag), tag) )
+lines.append('    ')
+lines.append('    ')
+lines.append('    // subclass relations')
+for child, parent in set(eparents):
+    lines.append('    %s -> %s [color="blue"];' % (tagsetname(child), tagsetname(parent)) )
+lines.append('    ')
+lines.append('    // usestag relations')
+for tagset, tag in set(etags):
+    lines.append('    %s -> %s [color="red"];' % (tagsetname(tagset), tagname(tag)) )
+lines.append('    ')
+lines.append('    ')
+lines.append('}')
+
+# store dotfile
+dotfilename = '%s.dot' % entity.split(':')[-1]
+with open(dotfilename, 'w') as fo:
+    fo.writelines(''.join(map(lambda line: '%s\n' % line, lines)))
+
