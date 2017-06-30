@@ -2,9 +2,10 @@
 
 ## Stack
 
-![Stack Overview](figs/stack.png)
+<!-- Intro: the three levels (rdf, class, instance), rdf: everything is an entities, classes, instances and properties -->
+Brick operates on three levels. At the RDF level everything is an *entity*. Triples of entities in the roles of subject, predicate and object make up statements. These are at the Brick level used to construct classes and relationships (known as properties). At the Model level instances of classes are constructed and connected using the relationships defined at the Brick level. While the RDF level is a tripel store, both the Brick and Model level should be seen as graphs with classes and instances (depending on whether it is the Brick or Model level) as nodes and properties as named edges.
 
-<!-- Intro: the three levels, entities, classes, instances and properties -->
+![Stack Overview](figs/stack.png)
 
 Dependency namespaces:
 - [RDF](https://www.w3.org/TR/rdf-syntax/) Declared, but not used below the model layer. Used for creating class instances in the model.
