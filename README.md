@@ -67,7 +67,27 @@ The main hvac setup is an example of a complex loop being represented as a seque
 
 #### AHU - Air Handler Unit
 
+The AHU has five distinct bodies of air, namely:
+
+1. **Outside Air** The fresh air being pulled into the AHU.
+2. **Mixed Air** The mixture of outside and return air before any conditioning has been applied in the primary flow.
+3. **Supply Air** The conditioned air being sent to the VAVs.
+4. **Return Air** The "spent" air returning from the VAVs.
+5. **Exhaust Air** The "spent" air being removed from the building.
+
+They are highlighted in the following overview:
+
 ![AHU Overview](figs/ahu.png)
+
+All point relating to a AHU are connected as objects to the AHU instance using the *hasPoint* relation to an object of a type prefixed by `AHU_`. Most AHU point types has names indicated which body they belong to. That is `_Outside_Air_`, `_Mixed_Air_`, `_Supply_Air_`, `_Return_Air_` and `_Exhaust_Air_`. **Example:** Any instance of `AHU_Exhaust_Air_Temperature_Sensor` is measuring the temperature of the exhaust air.
+
+Open questions:
+- Some point types refer to `_Discharge_Air_`, `_Fresh_Air_` and `_Bypass_Air_`. What are these?
+- It is not clear which body the type prefix `AHU_Static_Pressure_` refers to.
+- What is the role of the `_PreHeat_` types and does it fit into the above figure?
+- Are the `_Heat_Wheel_` types referring to a rotary heat exchanger?
+- What does the economizer do and how does it fit into the above figure?
+- What does the VFD (variable frequency drive) do and how does it fit into the above figure?
 
 <!--TODO: sparsely populated example-->
 
@@ -77,7 +97,7 @@ The VAV has a supply and a return side:
 
 ![VAV Overview](figs/vav.png)
 
-All points relating to a VAV are connected as objects to the VAV instance using the *hasPoint* relation to an object of a type prefixed by `VAV`. Points relating to the supply side furthermore is split into those originating before the VAV fan (having `_Supply_` in its type) and those originating after the fan (having `_Discharge_` in its type). For the return side these are called `_Return_` (before any fan) and `_Exhaust_` (after any fan). After the side designator is the generic point class and before it is an optional modifier.
+All points relating to a VAV are connected as objects to the VAV instance using the *hasPoint* relation to an object of a type prefixed by `VAV_`. Points relating to the supply side furthermore is split into those originating before the VAV fan (having `_Supply_` in its type) and those originating after the fan (having `_Discharge_` in its type). For the return side these are called `_Return_` (before any fan) and `_Exhaust_` (after any fan). After the side designator is the generic point class and before it is an optional modifier.
 
 **Example**: The `VAV_Occupied_Cooling_Min_Supply_Air_Flow_Setpoint` is:
 - `VAV` relates to a VAV.
