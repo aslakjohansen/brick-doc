@@ -94,7 +94,10 @@ Open questions:
 - What does the economizer do and how does it fit into the above figure?
 - What does the VFD (variable frequency drive) do and how does it fit into the above figure?
 
-<!--TODO: sparsely populated example-->
+<!-- sparsely populated example-->
+A sparsely populated model of an AHU could look like this:
+
+![AHU Example](figs/ahu_example.png)
 
 #### VAV - Variable Air Volume
 
