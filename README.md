@@ -110,7 +110,10 @@ All points relating to a VAV are connected as objects to the VAV instance using 
 - `Supply` indicates that the setpoint is relevant to the input side of the supply side.
 - `Air_Flow_Setpoint` it the generic point class telling us that the point represent a setpoint for airflow.
 
-<!--TODO: sparsely populated example-->
+<!-- sparsely populated example-->
+A sparsely populated model of a VAV could look like this:
+
+![VAV Example](figs/vav_example.png)
 
 #### HVAC Zone
 
