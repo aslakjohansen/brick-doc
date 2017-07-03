@@ -24,6 +24,16 @@ Brick namespaces:
 
 ## Concepts
 
+### Relations
+
+- *usedBy* ?
+- *usesMeasurement* ?
+- *usesPoint* ?
+- *usesTag* Used for associating a tagset with a tag.
+- *equivalentTagset* ?
+- *usesEquipment* ?
+- 
+
 ### Tagsets
 
 A class is defined as a subclass of one or more classes, with `owl:Class` as the base case. On the RDF level, this is a directed graph of *subClassOf* relations. Each node in this graph is a class entity and may have tags attached using the *usesTag* relation. To extract the mapping from tagset to tags one thus have to do:
@@ -57,7 +67,7 @@ The main hvac setup is an example of a complex loop being represented as a seque
 
 #### AHU - Air Handler Unit
 
-
+![AHU Overview](figs/ahu.png)
 
 #### VAV - Variable Air Volume
 
