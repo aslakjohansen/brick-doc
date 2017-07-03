@@ -5,6 +5,8 @@
 <!-- intro: the three levels (rdf, class, instance), rdf: everything is an entities, classes, instances and properties -->
 Brick operates on three levels. At the **RDF level** everything is an *entity*. Triples of entities -- in the roles of subject, predicate and object -- make up statements. These are at the **Brick level** used to construct classes and relationships (called *properties*). At the **Model level** instances of classes are constructed and connected using the relationships defined at the Brick level. While the RDF level is defined in a tripel store, both the Brick and Model level should be seen as graphs with classes and instances (depending on whether it is the Brick or Model level) as nodes and properties as named edges.
 
+<!--TODO: Namespaces-->
+
 ![Stack Overview](figs/stack.png)
 
 Dependency namespaces:
@@ -60,6 +62,10 @@ Loops are modeled as sequences at equipment granularity. Equipment details are a
 
 ### Electricity
 
-<!--figure: meter -isPointOf-> meter -isPointOf-> light -->
+<!-- intro: electricity aspect shaped by meters being points, example (building with main meter, light meter, one light and one fan) -->
+The electricity aspect is shaped around the meters being points of equipment and submeters. The distribution tree is constructed using *isPointOf* relations. The following is an example of the electricity aspect of a sample building containing a main meter (meter1), a lighting submeter (meter2), a fan and a light:
 
+![Example subgraph showing the electricity aspect](figs/electricitiy.png)
+
+**Note:** It is unclear how non-(meter|load) components like a fuses or photovoltaics fit into this format.
 
