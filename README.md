@@ -50,9 +50,10 @@ Loops are modeled as sequences at equipment granularity. Equipment details are a
 
 ### HVAC
 
-![Highlevel HVAC structure](figs/hvac.png)
+<!--intro: highlevel hvac is an example of a complex loop being represented as a sequence, figure shows physical system along with the main components of the Brick graph, equipment details illustrated as red annotations to the stem -->
+The main hvac setup is an example of a complex loop being represented as a sequence. The following illustration shows a physical system -- consisting of one AHU, one VAV, one HVAC zone and one room -- along with a corresponding partial Brick representation. Equipment details (such as sensors) are hinted in red.
 
-#### RTU - Roof Top Unit
+![Highlevel HVAC structure](figs/hvac.png)
 
 #### AHU - Air Handler Unit
 
