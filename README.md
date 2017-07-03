@@ -69,6 +69,8 @@ The main hvac setup is an example of a complex loop being represented as a seque
 
 ![AHU Overview](figs/ahu.png)
 
+<!--TODO: sparsely populated example-->
+
 #### VAV - Variable Air Volume
 
 The VAV has a supply and a return side:
@@ -82,6 +84,8 @@ All points relating to a VAV are connected as objects to the VAV instance using 
 - `Occupied_Cooling_Min` is a modifier indicating that the type relates the minimum level when occupied and cooling.
 - `Supply` indicates that the setpoint is relevant to the input side of the supply side.
 - `Air_Flow_Setpoint` it the generic point class telling us that the point represent a setpoint for airflow.
+
+<!--TODO: sparsely populated example-->
 
 #### HVAC Zone
 
