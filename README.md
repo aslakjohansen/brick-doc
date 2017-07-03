@@ -22,6 +22,8 @@ Brick namespaces:
 - **BrickTag** Essentially a list of tags.
 - **BrickFrame** The properties.
 
+Extensions are supposed to go into separate namespaces. So are all building instances.
+
 ## Concepts
 
 ### Relations
