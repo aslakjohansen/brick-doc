@@ -65,7 +65,7 @@ Loops are modeled as sequences at equipment granularity. Equipment details are a
 <!-- intro: electricity aspect shaped by meters being points, example (building with main meter, light meter, one light and one fan) -->
 The electricity aspect is shaped around the meters being points of equipment and submeters. The distribution tree is constructed using *isPointOf* relations. The following is an example of the electricity aspect of a sample building containing a main meter (meter1), a lighting submeter (meter2), a fan and a light:
 
-![Example subgraph showing the electricity aspect](figs/electricitiy.png)
+![Example subgraph showing the electricity aspect](figs/electricity.png)
 
 **Note:** It is unclear how non-(meter|load) components like a fuses or photovoltaics fit into this format.
 
