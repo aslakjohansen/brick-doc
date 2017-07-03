@@ -57,6 +57,8 @@ The main hvac setup is an example of a complex loop being represented as a seque
 
 #### AHU - Air Handler Unit
 
+
+
 #### VAV - Variable Air Volume
 
 The VAV has a supply and a return side:
@@ -73,7 +75,11 @@ All points relating to a VAV are connected as objects to the VAV instance using 
 
 #### HVAC Zone
 
+An HVAC zone may cover one or more rooms. It may have sensors attached using *hasPoint*.
+
 #### Room
+
+A room may have sensors attached using *hasPoint*. Sensors may be attached at room-level or at zone-level depending on how much is known about it. Queries will have to take this into account.
 
 ### Electricity
 
