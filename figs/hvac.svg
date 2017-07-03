@@ -10,8 +10,8 @@
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="419"
-   height="236"
-   viewBox="0 0 110.86041 62.441666"
+   height="273"
+   viewBox="0 0 110.86041 72.23125"
    version="1.1"
    id="svg8"
    inkscape:version="0.92.1 r15371"
@@ -25,9 +25,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4.0000001"
-     inkscape:cx="236.33506"
-     inkscape:cy="79.372737"
+     inkscape:zoom="45.254835"
+     inkscape:cx="261.90524"
+     inkscape:cy="269.0927"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -37,9 +37,9 @@
      inkscape:snap-smooth-nodes="true"
      inkscape:snap-text-baseline="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1136"
+     inkscape:window-height="1016"
      inkscape:window-x="0"
-     inkscape:window-y="745"
+     inkscape:window-y="27"
      inkscape:window-maximized="1">
     <inkscape:grid
        type="xygrid"
@@ -64,7 +64,7 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(0,-234.55835)">
+     transform="translate(0,-224.76876)">
     <g
        id="g845-9-6-3-9-6"
        transform="translate(82.020829,-39.952076)">
@@ -877,5 +877,27 @@
            sodipodi:nodetypes="cccc" />
       </g>
     </g>
+    <text
+       id="text819-7-2-6-9-2-56"
+       y="228.20834"
+       x="14.80633"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;line-height:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332px"
+         y="228.20834"
+         x="14.80633"
+         id="tspan817-4-6-1-45-61-93"
+         sodipodi:role="line">Physical</tspan></text>
+    <text
+       id="text819-7-2-6-9-2-56-6"
+       y="228.20834"
+       x="73.222404"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;line-height:5.29166651px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       xml:space="preserve"><tspan
+         style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:4.23333311px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:center;writing-mode:lr-tb;text-anchor:middle;stroke-width:0.26458332px"
+         y="228.20834"
+         x="73.222404"
+         id="tspan817-4-6-1-45-61-93-4"
+         sodipodi:role="line">Brick</tspan></text>
   </g>
 </svg>
