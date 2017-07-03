@@ -50,6 +50,8 @@ Loops are modeled as sequences at equipment granularity. Equipment details are a
 
 ### HVAC
 
+![Highlevel HVAC structure](figs/hvac.png)
+
 #### RTU - Roof Top Unit
 
 #### AHU - Air Handler Unit
