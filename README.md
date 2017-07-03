@@ -61,7 +61,7 @@ The main hvac setup is an example of a complex loop being represented as a seque
 
 The VAV has a supply and a return side:
 
-[VAV Overview](figs/vav.png)
+![VAV Overview](figs/vav.png)
 
 All points relating to a VAV are connected as objects to the VAV instance using the *hasPoint* relation to an object of a type prefixed by `VAV`. Points relating to the supply side furthermore is split into those originating before the VAV fan (having `_Supply_` in its type) and those originating after the fan (having `_Discharge_` in its type). For the return side these are called `_Return_` (before any fan) and `_Exhaust_` (after any fan). After the side designator is the generic point class and before it is an optional modifier.
 
