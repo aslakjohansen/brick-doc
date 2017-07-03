@@ -41,7 +41,8 @@ Flows of any form of matter (electrons excepted) is represented as an acyclic di
 
 ### Loops
 
-<!--intro: loops are modeled as sequences, the sequence originates in whichevery part of the loop produces the transferred quality, the sequence ends in whichever part of the loop consumes the quality, applications are expected to understand the involved components well enlugh to deduce the loopieness -->
+<!--intro: loops are modeled as sequences, equipment granularity, attached details, the sequence originates in whichevery part of the loop produces the transferred quality, the sequence ends in whichever part of the loop consumes the quality, applications are expected to understand the involved components well enough to deduce the loopieness -->
+Loops are modeled as sequences at equipment granularity. Equipment details are attached to this stem through typed entities. The sequence begins at whichever part of the loop produces the transferred quality and ends at the part which consumes it. Applications are expected to understand the involved equipment well enough to deduce the involved loop and and relevant equipment details based on types.
 
 ## Aspects
 
