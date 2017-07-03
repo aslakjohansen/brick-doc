@@ -32,7 +32,12 @@ Brick namespaces:
 - *usesTag* Used for associating a tagset with a tag.
 - *equivalentTagset* ?
 - *usesEquipment* ?
-- 
+- *hasLocation* Physical encapsulation.
+- *isPartOf* Logical encapsulation.
+- *hasPoint* Has (in the logical sense) a relevant timeseries.
+- *feeds* A flow of matter (electrons excepted).
+
+**Note:** Was *controls* not supposed to be defined in **BrickFrame**?
 
 ### Tagsets
 
