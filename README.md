@@ -3,7 +3,7 @@
 ## Stack
 
 <!-- intro: the three levels (rdf, class, instance), rdf: everything is an entities, classes, instances and properties -->
-Brick operates on three levels. At the **RDF level** everything is an *entity*. Triples of entities -- in the roles of subject, predicate and object -- make up statements. These are at the **Brick level** used to construct classes and relationships (called *properties*). At the **Model level** instances of classes are constructed and connected using the relationships defined at the Brick level. While the RDF level is defined in a tripel store, both the Brick and Model level should be seen as graphs with classes and instances (depending on whether it is the Brick or Model level) as nodes and properties as named edges.
+Brick operates on three levels. At the **RDF level** everything is an *entity*. Triples of entities -- in the roles of subject, predicate and object -- make up statements. These are at the **Brick level** used to construct classes and relationships (called *properties*). At the **Model level** instances of classes are constructed and connected using the relationships defined at the Brick level. While the RDF level is defined in a triple store, both the Brick and Model level should be seen as graphs with classes and instances (depending on whether it is the Brick or Model level) as nodes and properties as named edges.
 
 <!--TODO: Namespaces-->
 
@@ -11,7 +11,7 @@ Brick operates on three levels. At the **RDF level** everything is an *entity*. 
 
 Dependency namespaces:
 - [RDF](https://www.w3.org/TR/rdf-syntax/) Declared, but not used below the model layer. Used for creating class instances in the model.
-- [OWL](https://www.w3.org/TR/owl-ref/) Usd for classes, properties and property modifiers
+- [OWL](https://www.w3.org/TR/owl-ref/) Used for classes, properties and property modifiers
 - [RDFS](https://www.w3.org/TR/rdf-schema/) Used for extended class and property information (subtyping, range and domain).
 - [SKOS](https://www.w3.org/2009/08/skos-reference/skos.html) Used for annotating entities with human readable definitions
 - [XML](https://www.w3.org/XML/1998/namespace) Declared, but not used below the model layer.
