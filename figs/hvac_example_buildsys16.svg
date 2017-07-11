@@ -26,8 +26,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4142136"
-     inkscape:cx="208.61421"
-     inkscape:cy="108.87021"
+     inkscape:cx="340.74321"
+     inkscape:cy="96.849395"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -58,7 +58,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -924,7 +924,7 @@
                y="275.83334"
                x="23.8125"
                sodipodi:role="line"
-               id="tspan2140-3-0-6-05">exhaust_air_temperature_sensor</tspan></text>
+               id="tspan2140-3-0-6-05">return_air_temperature_sensor</tspan></text>
           <path
              inkscape:connector-curvature="0"
              id="path1686-0-0-8-2-9-7-5-2-52"
